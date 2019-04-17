@@ -59,6 +59,38 @@ android {
             applicationIdSuffix ".headerfooterrecycl"
             versionNameSuffix '-headerfooterrecycl'
         }
+        LinearSwipe {
+            dimension "layout"
+            applicationIdSuffix ".linswipe"
+            versionNameSuffix "-linswipe"
+            minSdkVersion 22
+        }
+        SwipeVer {
+            dimension "layout"
+            applicationIdSuffix ".swipever"
+            versionNameSuffix "-swipever"
+            minSdkVersion 22
+        }
+        Select {
+            dimension "layout"
+            applicationIdSuffix ".select"
+            versionNameSuffix "-select"
+            minSdkVersion 22
+        }
+        Brvah {
+            dimension "layout"
+            applicationIdSuffix ".brvah"
+            versionNameSuffix "-brvah"
+            minSdkVersion 22
+            allprojects {
+                repositories {
+                    maven { url "https://jitpack.io" }
+                }
+            }
+            dependencies {
+                implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+            }
+        }
         common {
             dimension "common"
         }
