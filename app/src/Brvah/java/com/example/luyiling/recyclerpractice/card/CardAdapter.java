@@ -27,7 +27,7 @@ public class CardAdapter extends BaseQuickAdapter<CardData, CardHolder> {
     @Override
     protected void convert(CardHolder helper, final CardData item) {
         helper.setText(R.id.tVitem, item.getId())
-                .setImageResource(R.id.iVitem, R.drawable.ic_launcher_foreground)
+//                .setImageResource(R.id.iVitem, R.drawable.ic_launcher_foreground)
                 .setBackgroundColor(R.id.rLframe, Color.RED);
         CardView cardView = helper.getView(R.id.cVframe);
         cardView.setCardBackgroundColor(item.getBackgroundColor());

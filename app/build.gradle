@@ -91,6 +91,12 @@ android {
                 implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
             }
         }
+        SpannedGrid{
+            dimension "layout"
+            applicationIdSuffix ".spannedgm"
+            versionNameSuffix "-spannedgm"
+            minSdkVersion 22
+        }
         common {
             dimension "common"
         }

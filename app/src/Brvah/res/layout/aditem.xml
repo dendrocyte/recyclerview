@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:id="@+id/rLframe"
-    android:background="@mipmap/ic_launcher_round"
+    android:background="@drawable/sample_footer_loading"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
+<!--android:background="@mipmap/ic_launcher_round"-->
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/iVicon"
-            android:src="@drawable/ic_launcher_foreground"
             />
+    <!--this pic only over 24: android:src="@drawable/ic_launcher_foreground"-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -44,6 +44,7 @@ public class BlankFragment extends Fragment {
 
         //the order is from the top to the end
         GridLayoutManager manager = new GridLayoutManager(getContext(),spancount);
+
         recyclerView.setLayoutManager(manager);
         recyclerView.setHasFixedSize(true);
         manager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() { //modify the width

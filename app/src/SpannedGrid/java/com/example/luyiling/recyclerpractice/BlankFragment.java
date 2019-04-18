@@ -42,7 +42,7 @@ public class BlankFragment extends Fragment {
 
         TextView title = view.findViewById(R.id.tVtitle);
         title.setText((BuildConfig.VERSION_NAME.split("-"))[1]);
-        init();
+        initii();
     }
 
     private List<String> initTitle(){
@@ -71,7 +71,40 @@ public class BlankFragment extends Fragment {
         adapter = new mAdapter(products);
         recyclerView.setAdapter(adapter);
     }
+    private void initii(){
+        final List<Products.Product> products = new Products().initiData(initTitle());
+        RecyclerView recyclerView = view.findViewById(R.id.recycler);
+       /* ViewGroup.LayoutParams params=recyclerView.getLayoutParams();
+        params.height=100;
+        recyclerView.setLayoutParams(params);
+        */
 
+
+        SpannedGridLayoutManager manager = new SpannedGridLayoutManager(
+                new SpannedGridLayoutManager.GridSpanLookup() {
+                    @Override
+                    public SpannedGridLayoutManager.SpanInfo getSpanInfo(int position) {
+                        Log.e(TAG,"here qq");
+                        switch (position){
+                            case 0://header
+                                return new SpannedGridLayoutManager.SpanInfo(4, 1);
+                            case 1:
+                                return new SpannedGridLayoutManager.SpanInfo(2, 2);
+                            case 2:
+                                return new SpannedGridLayoutManager.SpanInfo(2, 1);
+                            default:
+                                return new SpannedGridLayoutManager.SpanInfo(1, 1);
+
+                        }
+                    }
+                },
+                4, // number of columns
+                1f // how big is default item
+        );
+        recyclerView.setLayoutManager(manager);
+        adapter = new mAdapter(products);
+        recyclerView.setAdapter(adapter);
+    }
 
 
     //getItemViewType   》 onCreateViewHolder  》Holer 》onBindViewHolder
@@ -85,7 +118,7 @@ public class BlankFragment extends Fragment {
             View view = (viewtype == 1) ?
                     getLayoutInflater().inflate(R.layout.title, viewGroup,false):
                     getLayoutInflater().inflate(R.layout.item, viewGroup, false);
-            view.getLayoutParams().height = (viewGroup.getHeight()) / 3;
+//            view.getLayoutParams().height = (viewGroup.getHeight()) / 3;
 
             /* will be overlap
             view.getLayoutParams().width = (viewtype == 1) ? (viewGroup.getWidth())* spancount : viewGroup.getWidth();

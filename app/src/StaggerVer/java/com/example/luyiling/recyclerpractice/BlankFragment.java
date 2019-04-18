@@ -77,7 +77,7 @@ public class BlankFragment extends Fragment {
         @Override
         public Holder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewtype) {
             View view = (viewtype == 1) ?
-                    getLayoutInflater().inflate(R.layout.title, viewGroup,false):
+                    getLayoutInflater().inflate(R.layout.header, viewGroup,false):
                     getLayoutInflater().inflate(R.layout.item, viewGroup, false);
 
             /*can not arrange in onCreateViewHolder here

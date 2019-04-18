@@ -27,7 +27,7 @@ public class ShortcutAdapter extends BaseQuickAdapter<ShortcutData, ShortcutHold
     @Override
     protected void convert(final ShortcutHolder helper, final ShortcutData item) {
         helper.setText(R.id.tVitem, item.getId())
-                .setImageResource(R.id.iVicon, R.drawable.ic_launcher_foreground)
+//                .setImageResource(R.id.iVicon, R.drawable.sample_footer_loading_progress)
                 .setBackgroundColor(R.id.rLframe, Color.RED);
 
         helper.getView(R.id.rLframe).setOnClickListener(new View.OnClickListener() {
